@@ -26,7 +26,7 @@ public class ParamAspect {
     @Resource
     private Validator validator;
 
-    @Pointcut("execution(* top.yangsc.*.controller..*Controller.*(..))")
+    @Pointcut("execution(* top.yangsc.controller.*Controller.*(..))")
     public void paramPointCut(){
 
     }

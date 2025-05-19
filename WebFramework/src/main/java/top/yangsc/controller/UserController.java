@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import top.yangsc.base.ResultData;
 import top.yangsc.login.IUserService;
-import top.yangsc.login.bean.LoginRespVO;
-import top.yangsc.login.bean.LoginVO;
-import top.yangsc.login.bean.RegisterVO;
+import top.yangsc.controller.bean.LoginRespVO;
+import top.yangsc.controller.bean.LoginVO;
+import top.yangsc.controller.bean.RegisterVO;
 
 
 import javax.annotation.Resource;

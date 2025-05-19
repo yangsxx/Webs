@@ -1,4 +1,4 @@
-package top.yangsc.login.bean;
+package top.yangsc.controller.bean;
 
 import lombok.Data;
 import top.yangsc.parameterValidation.annotation.Condition;

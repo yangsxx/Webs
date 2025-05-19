@@ -3,9 +3,9 @@ package top.yangsc.login;
 import com.baomidou.mybatisplus.extension.service.IService;
 import top.yangsc.base.ResultData;
 import top.yangsc.base.pojo.Users;
-import top.yangsc.login.bean.LoginRespVO;
-import top.yangsc.login.bean.LoginVO;
-import top.yangsc.login.bean.RegisterVO;
+import top.yangsc.controller.bean.LoginRespVO;
+import top.yangsc.controller.bean.LoginVO;
+import top.yangsc.controller.bean.RegisterVO;
 
 
 /**
