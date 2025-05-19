@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.yangsc.base.mapper.KeyTableMapper">
+
+    <resultMap id="BaseResultMap" type="top.yangsc.base.pojo.KeyTable">
+    </resultMap>
+    <select id="findMaxVersion" resultType="java.lang.Integer">
+        select max(version) from value_table where key_id = #{id}
+    </select>
+    <select id="selectByPage" resultType="top.yangsc.base.pojo.KeyTable">
+        select * from key_table
+                 where (permission_level=1 or permission_level=0 or user_id=#{userId})
+        and is_deleted=false
+        <if test="permission != null">
+            and permission_level=#{permission}
+        </if>
+        order by updated_at desc , created_at desc
+        limit #{pageSize} offset #{offset}
+    </select>
+    <select id="selectCountByPage" resultType="java.lang.Long">
+        select count(*) from key_table
+        where (permission_level=1 or permission_level=0 or user_id=#{userId})
+        and is_deleted=false
+        <if test="permission != null">
+            and permission_level=#{permission}
+        </if>
+    </select>
+
+
+</mapper>
