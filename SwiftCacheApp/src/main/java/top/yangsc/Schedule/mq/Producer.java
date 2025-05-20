@@ -20,6 +20,9 @@ public class Producer {
     }
 
     public void sendAiTask(String json) {
+        if(json.length()>1000){
+            return;
+        }
         rabbitTemplate.convertAndSend(QUEUE_NAME, json);
     }
 }
