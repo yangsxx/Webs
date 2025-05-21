@@ -24,8 +24,6 @@ public class ControllerAdvice {
     }
     @ExceptionHandler(PermissionException.class)
     public ResultData<String> PermissionCatcher(PermissionException exception){
-        exception.fillInStackTrace();
-        exception.printStackTrace();
         return ResultData.Exception(HttpCode.FORBIDDEN_CODE,StringUtils.isEmpty(exception.getMessage())?"系统繁忙中，请稍后再试":"权限异常："+exception.getMessage());
 
     }
